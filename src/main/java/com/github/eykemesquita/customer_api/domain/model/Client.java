@@ -1,5 +1,6 @@
 package com.github.eykemesquita.customer_api.domain.model;
 
+
 import java.util.Date;
 import java.util.List;
 
@@ -10,6 +11,8 @@ public class Client {
     private String name;
 
     private String email;
+
+    private String docNumber;
 
     private String phone;
 
@@ -29,6 +32,8 @@ public class Client {
 
     private Date createdDate;
 
+    private Date modifiedDate;
+
     private boolean emailOptIn;
 
     private boolean smsOptIn;
@@ -37,28 +42,28 @@ public class Client {
 
     private boolean pushOptIn;
 
-    private List<Address> adressList;
+    private List<Address> addressList;
 
-    public Client(String name, String email, String phone, Date birthDate, boolean isEmployee, String stateInscription, String municipalInscription,
-                  boolean isBlocked, String createdBy, String modifiedBy, Date createdDate, boolean emailOptIn, boolean smsOptIn, boolean whatsappOptIn,
-                  boolean pushOptIn, List<Address> adressList) {
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-        this.birthDate = birthDate;
-        this.isEmployee = isEmployee;
-        this.stateInscription = stateInscription;
-        this.municipalInscription = municipalInscription;
-        this.isBlocked = isBlocked;
-        this.createdBy = createdBy;
-        this.modifiedBy = modifiedBy;
-        this.createdDate = createdDate;
-        this.emailOptIn = emailOptIn;
-        this.smsOptIn = smsOptIn;
-        this.whatsappOptIn = whatsappOptIn;
-        this.pushOptIn = pushOptIn;
-        this.adressList = adressList;
-    }
+//    public Client(String name, String email, String docNumber, String phone, Date birthDate, boolean isEmployee, String stateInscription, String municipalInscription,
+//                  boolean isBlocked, String createdBy, String modifiedBy, Date createdDate, Date modifiedDate, boolean emailOptIn, boolean smsOptIn, boolean whatsappOptIn,
+//                  boolean pushOptIn, List<Address> addressList) {
+//        this.name = name;
+//        this.email = email;
+//        this.phone = phone;
+//        this.birthDate = birthDate;
+//        this.isEmployee = isEmployee;
+//        this.stateInscription = stateInscription;
+//        this.municipalInscription = municipalInscription;
+//        this.isBlocked = isBlocked;
+//        this.createdBy = createdBy;
+//        this.modifiedBy = modifiedBy;
+//        this.createdDate = createdDate;
+//        this.emailOptIn = emailOptIn;
+//        this.smsOptIn = smsOptIn;
+//        this.whatsappOptIn = whatsappOptIn;
+//        this.pushOptIn = pushOptIn;
+//        this.addressList = addressList;
+//    }
 
     public String getName() {
         return name;
@@ -74,6 +79,14 @@ public class Client {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getDocNumber() {
+        return docNumber;
+    }
+
+    public void setDocNumber(String docNumber) {
+        this.docNumber = docNumber;
     }
 
     public String getPhone() {
@@ -148,6 +161,14 @@ public class Client {
         this.createdDate = createdDate;
     }
 
+    public Date getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public void setModifiedDate(Date modifiedDate) {
+        this.modifiedDate = modifiedDate;
+    }
+
     public boolean isEmailOptIn() {
         return emailOptIn;
     }
@@ -180,11 +201,11 @@ public class Client {
         this.pushOptIn = pushOptIn;
     }
 
-    public List<Address> getAdressList() {
-        return adressList;
+    public List<Address> getAddressList() {
+        return addressList;
     }
 
-    public void setAdressList(List<Address> adressList) {
-        this.adressList = adressList;
+    public void setAddressList(List<Address> addressList) {
+        this.addressList = addressList;
     }
 }

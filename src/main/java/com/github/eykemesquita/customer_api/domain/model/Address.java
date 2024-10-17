@@ -34,15 +34,17 @@ public class Address {
 
     private boolean active;
 
-    private Date creationDate;
+    private Date createdDate;
+
+    private Date modifiedDate;
 
     private String createdBy;
 
     private String modifiedBy;
 
     public Address(boolean principal, String sapClientId, SapSyncStatus sapSyncStatus, String sapSyncMsg, String addressType, String address,
-                   String number, String complement, String city, String state, String zipCode, String neighborhood, boolean active, Date creationDate,
-                   String createdBy, String modifiedBy) {
+                   String number, String complement, String city, String state, String zipCode, String neighborhood, boolean active, Date createdDate,
+                   Date modifiedDate, String createdBy, String modifiedBy) {
         this.principal = principal;
         this.sapClientId = sapClientId;
         this.sapSyncStatus = sapSyncStatus;
@@ -56,7 +58,8 @@ public class Address {
         this.zipCode = zipCode;
         this.neighborhood = neighborhood;
         this.active = active;
-        this.creationDate = creationDate;
+        this.createdDate = createdDate;
+        this.modifiedDate = modifiedDate;
         this.createdBy = createdBy;
         this.modifiedBy = modifiedBy;
     }
@@ -165,12 +168,20 @@ public class Address {
         this.active = active;
     }
 
-    public Date getCreationDate() {
-        return creationDate;
+    public Date getCreatedDate() {
+        return createdDate;
     }
 
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public Date getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public void setModifiedDate(Date modifiedDate) {
+        this.modifiedDate = modifiedDate;
     }
 
     public String getCreatedBy() {
